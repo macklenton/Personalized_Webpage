@@ -1,11 +1,26 @@
-const form = document.getElementById("form");
+const form = document.getElementById("user-form");
 const name = document.getElementById("name");
 const age = document.getElementById("age");
+const formSection = document.querySelector(".form-section");
+const hiddenSection = document.getElementById("hidden-section");
+
+// hidden section
+function personalContent(){
+    if(form){
+        formSection.hidden = true
+        hiddenSection.hidden = false; 
+    }
+    
+}
+//event listener
 
 form.addEventListener("submit", function(event){
 
 
     event.preventDefault();
+
+    personalContent();
+
     console.log("Form Submitted");
 
     console.log(name.value);
@@ -16,4 +31,8 @@ form.addEventListener("submit", function(event){
 
     const savedName = localStorage.getItem("name");
     const savedAge = localStorage.getItem("age");
+    
+    
+
 });
+

@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index.js">
+    <script src="index.js" defer></script>
 </head>
 <body>
 
     <main>
-        <section>
+        <section class="form-section">
             <h2>Tell Us ABout Yourself</h2>
 
             <form id="user-form">
+
             <label for="name" id="name" >Name</label>
             <input type="text" name="name" id="name" placeholder="Enter your name", required>
             <br>
@@ -28,6 +29,18 @@
              <button type="submit" id="button"> Submit </button>
         </form>
         </section>
+
+        <!-- HIDDEN SECTION -->
+         <section id="hidden-section" hidden>
+            <h2 id="greetings"></h2>
+            <p id="age-months"></p>
+            <div id="age-message"></div>
+            <h3>
+                 Daily Motivation
+            </h3>
+            <ul id="quotes"></ul>
+            <button type="button" id="edit-button"> Edit My details</button>
+         </section>
         
      </main>
     
