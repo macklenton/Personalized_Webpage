@@ -38,12 +38,21 @@ form.addEventListener("submit", function(event){
     const savedAge = localStorage.getItem("age");
     const userAge = Number(age.value);// convert string to number
     ageContent(userAge);
+    welcome(savedName);
+
 });
- 
+ // AGE FUNCTION
 function ageContent(userAge){
     if(userAge>= 18){
         ageMessage.textContent =  "You can access adult content"
     }else{
-        ageMessage.textContent = "Your too young for adult content"
+        ageMessage.textContent = "You're too young for adult content"
     }
 }
+
+// GREETINGS FUNCTION
+function welcome(savedName){
+    greetMessage.textContent = `Welcome, ${savedName}!` ;
+}
+
+//
