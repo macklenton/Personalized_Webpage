@@ -3,6 +3,8 @@ const name = document.getElementById("name");
 const age = document.getElementById("age");
 const formSection = document.querySelector(".form-section");
 const hiddenSection = document.getElementById("hidden-section");
+const ageMessage = document.getElementById("age-message");
+const greetMessage = document.getElementById("greetings");
 
 // hidden section
 function personalContent(){
@@ -26,13 +28,22 @@ form.addEventListener("submit", function(event){
     console.log(name.value);
     console.log(age.value);
 
+    console.log("Name input:", name.value);
+    console.log("Age input:", age.value);
+
     localStorage.setItem("name", name.value);
     localStorage.setItem("age", age.value);
 
     const savedName = localStorage.getItem("name");
     const savedAge = localStorage.getItem("age");
-    
-    
-
+    const userAge = Number(age.value);// convert string to number
+    ageContent(userAge);
 });
-
+ 
+function ageContent(userAge){
+    if(userAge>= 18){
+        ageMessage.textContent =  "You can access adult content"
+    }else{
+        ageMessage.textContent = "Your too young for adult content"
+    }
+}
