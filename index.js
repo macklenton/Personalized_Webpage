@@ -36,8 +36,8 @@ form.addEventListener("submit", function(event){
     console.log("Name input:", name.value);
     console.log("Age input:", age.value);
 
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("age", age.value);
+    localStorage.setItem("name", name.value);// storage for name
+    localStorage.setItem("age", age.value);// storage for age
 
     const savedName = localStorage.getItem("name");
     const savedAge = localStorage.getItem("age");
@@ -72,7 +72,8 @@ function calculateAgeMonths(userAge){
 
 
 function dailyQuotes(){
-    
+
+    motivations.innerHTML = ""; // clears existing content of the list
     
     for(let i=0; i < 5; i++){
         const item = document.createElement("li");
