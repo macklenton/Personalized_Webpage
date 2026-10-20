@@ -7,6 +7,7 @@ const ageMessage = document.getElementById("age-message");
 const greetMessage = document.getElementById("greetings");
 const ageMonths = document.getElementById("age-months");
 const motivations = document.getElementById("quotes");
+const editButton = document.getElementById("edit-button");
 
 
 
@@ -72,6 +73,7 @@ function calculateAgeMonths(userAge){
 
 function dailyQuotes(){
     
+    
     for(let i=0; i < 5; i++){
         const item = document.createElement("li");
         item.textContent = `Keep Trusting.`
@@ -80,3 +82,10 @@ function dailyQuotes(){
 
     }   
 }
+
+//EDIT BUTTON
+editButton.addEventListener('click', function(){
+   hiddenSection.hidden = true;
+   formSection.hidden = false;
+
+});
