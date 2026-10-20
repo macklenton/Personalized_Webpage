@@ -6,6 +6,9 @@ const hiddenSection = document.getElementById("hidden-section");
 const ageMessage = document.getElementById("age-message");
 const greetMessage = document.getElementById("greetings");
 const ageMonths = document.getElementById("age-months");
+const motivations = document.getElementById("quotes");
+
+
 
 // hidden section
 function personalContent(){
@@ -40,7 +43,8 @@ form.addEventListener("submit", function(event){
     const userAge = Number(age.value);// convert string to number
     ageContent(userAge);
     welcome(savedName);
-    calculateAgeMonths(userAge)
+    calculateAgeMonths(userAge);
+    dailyQuotes();
 
 });
  // AGE FUNCTION
@@ -63,3 +67,16 @@ function calculateAgeMonths(userAge){
     ageMonths.textContent = ` You are ${months} months old.`
 }
 
+// MOTIVATIONAL QUOTES LOOP
+
+
+function dailyQuotes(){
+    
+    for(let i=0; i < 5; i++){
+        const item = document.createElement("li");
+        item.textContent = `Keep Trusting.`
+        motivations.appendChild(item);
+        
+
+    }   
+}
