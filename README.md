@@ -84,6 +84,19 @@ personalized-webpage/
 5. JavaScript displays the greeting, age-based message, age in months, and five motivational quotes.
 6. The user can click **Edit My details** to return to the form and submit updated information.
 
+
+## SETUP INSTRUCTIONS
+Option 1: Open directly
+
+Download or clone the repository and open:
+```https://github.com/macklenton/Personalized_Webpage ```
+
+index.html  in a web browser.
+
+Option 2: Use live Server
+``` https://macklenton.github.io/Personalized_Webpage/```
+
+
 ## Design and Styling
 
 The interface uses a simple, modern design focused on readability and ease of use.
@@ -95,7 +108,7 @@ The interface uses a simple, modern design focused on readability and ease of us
 | Page background | Light Gray-Blue | `#F4F6FB` |
 | Main card background | White | `#FFFFFF` |
 | Main text | Dark Blue-Gray | `#252B42` |
-| Success message background | Soft Green | `#E5F5EC` |
+
 
 **Typography:** Arial, Helvetica, sans-serif.
 
