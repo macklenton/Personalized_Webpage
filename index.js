@@ -5,6 +5,7 @@ const formSection = document.querySelector(".form-section");
 const hiddenSection = document.getElementById("hidden-section");
 const ageMessage = document.getElementById("age-message");
 const greetMessage = document.getElementById("greetings");
+const ageMonths = document.getElementById("age-months");
 
 // hidden section
 function personalContent(){
@@ -39,6 +40,7 @@ form.addEventListener("submit", function(event){
     const userAge = Number(age.value);// convert string to number
     ageContent(userAge);
     welcome(savedName);
+    calculateAgeMonths(userAge)
 
 });
  // AGE FUNCTION
@@ -55,4 +57,9 @@ function welcome(savedName){
     greetMessage.textContent = `Welcome, ${savedName}!` ;
 }
 
-//
+//AGE CALCULATION
+function calculateAgeMonths(userAge){
+    const months = userAge * 12;
+    ageMonths.textContent = ` You are ${months} months old.`
+}
+
